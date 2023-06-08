@@ -25,9 +25,11 @@ def _aggregate_result(result):
 @app.route('/', methods=['GET'])
 def search_api():
     query = request.args.get('q')
-    print(query)
-    return dict(result=get_amazon_result(query))
-
+    # print(query)
+    jsondata = dict(result=get_amazon_result(query))
+    # print('jsonData')
+    # print(jsondata)
+    return jsondata
 
 if __name__ == '__main__':
     app.run(port=8080, host='0.0.0.0')

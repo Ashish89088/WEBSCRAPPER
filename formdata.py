@@ -17,9 +17,9 @@ def getValue():
     # Using urlopen() function with url in it  
     webUrl = requests.post(amazonUrl)  
 
-    jd = flaskApi.jsondata
+    jd = flaskApi.table_html
     print(jd)
-    return render_template('showData.html', n=name,jd=jd),name
+    return render_template('showData.html', n=name,jd=jd)
 
 if __name__ == '__main__':
     app.run(debug=True)

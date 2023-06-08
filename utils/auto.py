@@ -15,6 +15,7 @@ res = scraper.get_result_similar(url,grouped=True)
 # print(res)
 
 web_key = list(res.keys())
+print(web_key)
 
 k1, k2 = web_key[0], web_key[2]
 
@@ -25,5 +26,4 @@ scraper.save('amazon-search')
 # print("\n")
 # print(len(result['Price']))
 # print(len(result['Title']))
-
 
